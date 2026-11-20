@@ -224,6 +224,16 @@ dvc remote add -d storage s3://your-bucket/automl-forge
 
 Keep remote credentials outside Git. The bundled sample dataset is public demonstration data; put private uploads under `data/raw/` or in the configured runtime upload directory.
 
+## Model monitoring and retraining
+
+When a new labelled batch arrives, `scripts/monitor_and_retrain.py` validates it, evaluates the current champion model on it, retrains a candidate on old + new data (logged to MLflow) and runs a quality gate on weighted F1. The champion is only replaced with an explicit `--promote`, and every decision is recorded in `reports/model_decisions.jsonl`.
+
+```bash
+python scripts/monitor_and_retrain.py
+```
+
+Details, metric choice and results: [docs/MONITORING.md](docs/MONITORING.md).
+
 ## Tests
 
 ```bash
