@@ -28,3 +28,21 @@ stages:
     metrics:
       - reports/automl_results.json:
           cache: false
+  monitor_retrain:
+    cmd: python scripts/monitor_and_retrain.py
+    deps:
+      - data/sample_classification.csv
+      - data/new_batch_classification.csv
+      - models/dvc_best_model.joblib
+      - scripts/monitor_and_retrain.py
+      - backend/app/monitoring.py
+    params:
+      - monitoring
+    outs:
+      - models/candidate_model.joblib:
+          cache: false
+    metrics:
+      - reports/champion_evaluation.json:
+          cache: false
+      - reports/quality_gate.json:
+          cache: false
