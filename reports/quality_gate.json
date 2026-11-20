@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-11-20T08:37:16+00:00",
+  "champion_model": "models/dvc_best_model.joblib",
+  "candidate_model": "models/candidate_model.joblib",
+  "holdout_rows": 18,
+  "champion_holdout_metrics": {
+    "accuracy": 0.8888888888888888,
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1": 0.8888888888888888,
+    "rows": 18
+  },
+  "candidate_holdout_metrics": {
+    "accuracy": 0.9444444444444444,
+    "precision": 0.9484126984126983,
+    "recall": 0.9444444444444444,
+    "f1": 0.9423868312757201,
+    "rows": 18
+  },
+  "metric": "f1",
+  "champion_score": 0.8888888888888888,
+  "candidate_score": 0.9423868312757201,
+  "improvement": 0.053498,
+  "checks": {
+    "candidate_f1 >= 0.75": true,
+    "candidate_f1 - champion_f1 >= 0.01": true
+  },
+  "decision": "candidate_eligible",
+  "eligible_for_promotion": true,
+  "promoted": false,
+  "mlflow_run_id": "0d77b8535cc742aaa428fb4fcc0784b7"
+}

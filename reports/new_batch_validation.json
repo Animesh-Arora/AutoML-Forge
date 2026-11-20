@@ -1,0 +1,24 @@
+{
+  "rows": 60,
+  "columns": 4,
+  "required_columns": [
+    "age",
+    "income",
+    "city",
+    "purchased"
+  ],
+  "extra_columns": [],
+  "missing_values": {
+    "age": 0,
+    "income": 1,
+    "city": 1,
+    "purchased": 0
+  },
+  "missing_target_rows": 0,
+  "duplicate_rows": 2,
+  "rows_after_cleaning": 58,
+  "target_distribution": {
+    "yes": 41,
+    "no": 17
+  }
+}

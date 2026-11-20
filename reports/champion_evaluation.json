@@ -1,0 +1,13 @@
+{
+  "evaluated_at": "2026-11-20T08:37:16+00:00",
+  "model_path": "models/dvc_best_model.joblib",
+  "algorithm": "LogisticRegression",
+  "dataset": "data/new_batch_classification.csv",
+  "metrics": {
+    "accuracy": 0.7931034482758621,
+    "precision": 0.8399164054336469,
+    "recall": 0.7931034482758621,
+    "f1": 0.801624284382905,
+    "rows": 58
+  }
+}

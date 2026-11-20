@@ -1,0 +1,7 @@
+[A] new batch: 60 rows -> 58 after removing 2 duplicates
+    missing values: {'age': 0, 'income': 1, 'city': 1, 'purchased': 0}
+    target distribution: {'yes': 41, 'no': 17}
+[B] champion on new batch: accuracy=0.793, precision=0.840, recall=0.793, f1=0.802
+[C] candidate trained on 59 rows (20 old + 40 new), saved to models/candidate_model.joblib
+[D] holdout f1: champion=0.889 candidate=0.942 -> candidate_eligible
+    MLflow logged: True  run_id=0d77b8535cc742aaa428fb4fcc0784b7
