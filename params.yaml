@@ -4,3 +4,13 @@ training:
   cv_folds: 5
   selection_metric_classification: f1_weighted
   selection_metric_regression: neg_root_mean_squared_error
+monitoring:
+  reference_data: data/sample_classification.csv
+  new_batch: data/new_batch_classification.csv
+  target: purchased
+  champion_model: models/dvc_best_model.joblib
+  candidate_model: models/candidate_model.joblib
+  holdout_size: 0.3
+  gate_metric: f1
+  min_score: 0.75
+  min_improvement: 0.01
